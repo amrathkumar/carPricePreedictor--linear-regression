@@ -34,10 +34,10 @@ def predict():
         fuel_type = request.form.get('fuel_type')
         kms = request.form.get('kilo_driven')
 
-        # 🔥 DEBUG PRINT (IMPORTANT)
+        
         print(company, car_model, year, fuel_type, kms)
 
-        # ✅ Convert safely
+        
         year = int(year)
         kms = int(kms)
 
@@ -46,7 +46,7 @@ def predict():
             columns=['name', 'company', 'year', 'fuel_type', 'km', 'index']
         )
 
-        print(input_df)  # 👈 CHECK THIS OUTPUT
+        print(input_df) 
 
         prediction = model.predict(input_df)
 
